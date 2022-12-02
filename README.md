@@ -49,3 +49,9 @@ hotfix/{日付}_{説明 or Issue番号}
 - docker-compose run --entrypoint "poetry install" demo-app --no-root <- [エラー対処](https://github.com/python-poetry/poetry/issues/1227)
 - docker-compose build --no-cache
 - docker-compose up <- app 立ち上げ
+- ## mysql クライアントのインストール
+- docker-compose exec demo-app poetry add sqlalchemy aiomysql
+- docker-compose exec db mysql demo <- ターミナルで起動
+  - SHOW TABLES;
+  - SHOW DESCRIBE tasks;
+  - DESCRIBE dones;
